@@ -1,0 +1,34 @@
+{
+    "parser": "babel-eslint", //eslint解析器 还挺麻烦的
+    "env": { //指定启动的环境
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "extends": [
+        "standard",
+        "standard-react"
+    ],
+    "plugins": [
+        "flow-vars"
+    ],
+    "globals": {
+        "Action": false,
+        "__DEV__": false,
+        "__PROD__": false,
+        "__DEBUG__": false,
+        "__DEBUG_NEW_WINDOW__": false,
+        "__BASENAME__": false
+    },
+    "rules": {
+        "semi": 0,
+        "no-var": 1,
+        "jsx-quotes": [2, "prefer-double"],
+        "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
+        "prefer-const": 0,
+        "new-cap": 0,
+        "prop-types": [0,{}],
+        "no-useless-constructor": 0,
+        "no-multiple-empty-lines": 2
+    }
+}
