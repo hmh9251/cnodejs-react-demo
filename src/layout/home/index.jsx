@@ -2,6 +2,8 @@ import React from 'react';
 import style from './style';
 
 import { Panel, PanelHeader, PanelInner } from '../../component/business/panel';
+import Nav from '../../component/business/nav';
+import List from '../../component/business/list';
 
 class Home extends React.Component {
   render() {
@@ -11,11 +13,9 @@ class Home extends React.Component {
         <div className={style.content}>
           <Panel>
             <section>
-              <PanelHeader>
-                <div>PanelHeader</div>
-              </PanelHeader>
+              <PanelHeader><Nav /></PanelHeader>
               <PanelInner>
-                <div>container</div>
+                <List />
               </PanelInner>
             </section>
           </Panel>
