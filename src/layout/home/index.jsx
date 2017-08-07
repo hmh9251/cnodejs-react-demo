@@ -17,25 +17,25 @@ class Home extends React.Component {
             <section>
               <PanelHeader>无人回复的话题</PanelHeader>
               <PanelInner>
-                <ul class="unstyled">
+                <ul className="unstyled">
                   <li>
-                    <div><a class="dark topic_title" href="/topic/59881c0b2d4b0af475035301" title="express与koa中间件模式对比">express与koa中间件模式对比</a>
+                    <div><a className="dark topic_title" href="/topic/59881c0b2d4b0af475035301" title="express与koa中间件模式对比">express与koa中间件模式对比</a>
                     </div>
                   </li>
                   <li>
-                    <div><a class="dark topic_title" href="/topic/5987caab206061d87545c52d" title="基于Koa2和superagent实现的英语四六级成绩查询系统，同时提供免费API接口">基于Koa2和superagent实现的英语四六级成绩查询系统，同时提供免费API接口</a>
+                    <div><a className="dark topic_title" href="/topic/5987caab206061d87545c52d" title="基于Koa2和superagent实现的英语四六级成绩查询系统，同时提供免费API接口">基于Koa2和superagent实现的英语四六级成绩查询系统，同时提供免费API接口</a>
                     </div>
                   </li>
                   <li>
-                    <div><a class="dark topic_title" href="/topic/59871971206061d87545c514" title="Egg，React，MobX，SSR（服务端渲染）Demo">Egg，React，MobX，SSR（服务端渲染）Demo</a>
+                    <div><a className="dark topic_title" href="/topic/59871971206061d87545c514" title="Egg，React，MobX，SSR（服务端渲染）Demo">Egg，React，MobX，SSR（服务端渲染）Demo</a>
                     </div>
                   </li>
                   <li>
-                    <div><a class="dark topic_title" href="/topic/5986e486e78b15b416835126" title="react-navigation 跳转路由，旧页面数据状态问题？">react-navigation 跳转路由，旧页面数据状态问题？</a>
+                    <div><a className="dark topic_title" href="/topic/5986e486e78b15b416835126" title="react-navigation 跳转路由，旧页面数据状态问题？">react-navigation 跳转路由，旧页面数据状态问题？</a>
                     </div>
                   </li>
                   <li>
-                    <div><a class="dark topic_title" href="/topic/5986db9adf27f24718ea94ce" title="Koa开发项目，有什么好的类似于swagger的可视化api管理包吗">Koa开发项目，有什么好的类似于swagger的可视化api管理包吗</a>
+                    <div><a className="dark topic_title" href="/topic/5986db9adf27f24718ea94ce" title="Koa开发项目，有什么好的类似于swagger的可视化api管理包吗">Koa开发项目，有什么好的类似于swagger的可视化api管理包吗</a>
                     </div>
                   </li>
                 </ul>
