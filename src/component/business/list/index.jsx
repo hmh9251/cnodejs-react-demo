@@ -21,6 +21,19 @@ class List extends React.Component {
       })
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.tab && nextProps.page) {
+      axios.get('http://cnodejs.org/api/v1/topics?tab=' + nextProps.tab + '&page=' + nextProps.page + '&limit=20')
+        .then((req) => {
+          if (req.status === 200 && req.data.success === true) {
+            this.setState({
+              data: req.data.data
+            })
+          }
+        })
+    }
+  }
+
   render() {
     return (
       <div className={style.topic_list}>
@@ -39,7 +52,6 @@ List.propTypes = {
 
 function Cell({ data }) {
   let { author, reply_count, visit_count, title, top, tab } = data
-  console.log('Cell cell cell');
   return (
     <div className={style.cell}>
       <div className={style.cell_left + ' clearfix'}>
