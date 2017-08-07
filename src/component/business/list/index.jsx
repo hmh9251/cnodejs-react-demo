@@ -1,8 +1,14 @@
 import React from 'react';
 import style from './style';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import PropTypes from 'prop-types';
 
-function List() {
+function List({ match }) {
+  axios.get('http://cnodejs.org/api/v1/topics?tab=' + match.params.id + '&page=' + match.params.page + '&limit=20')
+    .then(function (req) {
+      console.log(req);
+    })
   let arr = [];
   for (let i = 0; i < 40; i++) {
     arr.push(<Cell key={i} />);
@@ -12,6 +18,10 @@ function List() {
       {arr}
     </div>
   )
+}
+
+List.propTypes = {
+  match: PropTypes.object.isRequired
 }
 
 function Cell() {
@@ -29,7 +39,7 @@ function Cell() {
           </span>
         </span>
         <span className={style.put_top}>置顶</span>
-        <span className={style.put_top + ' ' + style.topiclist_tab}>问答</span>
+        {/* <span className={style.put_top + ' ' + style.topiclist_tab}>问答</span> */}
         <Link to="/" className={style.title}>Node.js Event Loop 的理解 Timers，process.nextTick()</Link>
       </div>
       <div className={style.cell_right}>

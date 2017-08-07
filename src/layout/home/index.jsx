@@ -1,6 +1,8 @@
 import React from 'react';
 import style from './style';
 
+import { Route } from 'react-router-dom';
+
 import { Panel, PanelHeader, PanelInner } from '../../component/business/panel';
 import Nav from '../../component/business/nav';
 import List from '../../component/business/list';
@@ -15,7 +17,7 @@ class Home extends React.Component {
             <section>
               <PanelHeader><Nav /></PanelHeader>
               <PanelInner>
-                <List />
+                <Route path="/tab/:id/:page" component={List} />
               </PanelInner>
             </section>
           </Panel>

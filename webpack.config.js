@@ -71,7 +71,28 @@ module.exports = {
         extensions: ['.js', '.jsx', '.styl']
     },
     devServer: {
-        historyApiFallback: true,
+        historyApiFallback: {
+            rewrites: [
+                {
+                    from: /.*\/assets\/.*/,
+                    to: function (context) {
+                        return context.parsedUrl.pathname.match(/\/assets\/.*/)[0];
+                    }
+                },
+                {
+                    from: /\/main\.js.*/,
+                    to: function (context) {
+                        return context.parsedUrl.pathname.match(/\/main\.js.*/)[0];
+                    }
+                },
+                {
+                    from: /\/style\.css.*/,
+                    to: function (context) {
+                        return context.parsedUrl.pathname.match(/\/style\.css.*/)[0];
+                    }
+                }
+            ]
+        },
         inline: true,//注意：不写hot: true，否则浏览器无法自动更新；也不要写colors:true，progress:true等，webpack2.x已不支持这些
     },
     plugins: [

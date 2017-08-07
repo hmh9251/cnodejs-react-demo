@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/hmh9251/ruby-china-react-demo#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-polyfill": "^6.23.0",
     "bootstrap": "^3.3.7",
     "marked": "^0.3.6",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
 import Header from './layout/header';
 import Home from './layout/home';
@@ -8,10 +8,15 @@ const BasicExample = () => (
   <Router>
     <div>
       <Header />
-      <Route exact path="/" component={Home} />
-      <Route path="/topics" render={() => (
-        <div>This is topics</div>
-      )} />
+      <div>
+        <Route exact path="/" render={() => (
+          <Redirect to="/tab/good/1" />
+        )} />
+        <Route path="/tab" component={Home} />
+        <Route path="/api" render={() => (
+          <div>This is api</div>
+        )} />
+      </div>
     </div>
   </Router>
 )
