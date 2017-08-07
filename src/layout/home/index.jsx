@@ -6,6 +6,7 @@ import { Route } from 'react-router-dom';
 import { Panel, PanelHeader, PanelInner } from '../../component/business/panel';
 import Nav from '../../component/business/nav';
 import List from '../../component/business/list';
+import Pagination from '../../component/normal/pagination';
 
 class Home extends React.Component {
   render() {
@@ -16,9 +17,14 @@ class Home extends React.Component {
           <Panel>
             <section>
               <PanelHeader><Nav /></PanelHeader>
-              <PanelInner>
-                <Route path="/tab/:id/:page" component={List} />
-              </PanelInner>
+              <Route path="/tab/:id/:page" render={({ match }) => (
+                <PanelInner>
+                  <section>
+                    <List tab={match.params.id} page={match.params.page} />
+                    <Pagination tab={match.params.id} page={match.params.page} />
+                  </section>
+                </PanelInner>
+              )} />
             </section>
           </Panel>
         </div>

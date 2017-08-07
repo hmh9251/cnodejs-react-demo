@@ -1,21 +1,27 @@
 import React from 'react';
 import style from './style';
+import PropTypes from 'prop-types';
 
-function Pagination() {
+import { Link } from 'react-router-dom';
+
+function Pagination({ tab, page }) {
   return (
-    <div class="pagination" current_page="1">
-  <ul>
-    <li class="disabled"><a>«</a></li>
-    <li class="disabled active"><a>1</a></li>
-    <li><a href="/?tab=all&amp;page=2">2</a></li>
-    <li><a href="/?tab=all&amp;page=3">3</a></li>
-    <li><a href="/?tab=all&amp;page=4">4</a></li>
-    <li><a href="/?tab=all&amp;page=5">5</a></li>
-    <li><a>...</a></li>
-    <li><a href="/?tab=all&amp;page=115">»</a></li>
-  </ul>
-</div>
+    <div className={style.pagination}>
+      <ul>
+        <li className={style.disable}>{ page === '1' ?  (<a>«</a>) : (<Link to="/">«</Link>)}</li>
+        <li className={style.disable + ' ' + style.active}><a>1</a></li>
+        <li><Link to="/">2</Link></li>
+        <li><Link to="/">3</Link></li>
+        <li><Link to="/">4</Link></li>
+        <li><Link to="/">5</Link></li>
+        <li><Link to="/">...</Link></li>
+      </ul>
+    </div>
   )
+}
+Pagination.propTypes = {
+  tab: PropTypes.string.isRequired,
+  page: PropTypes.string.isRequired
 }
 
 export default Pagination;

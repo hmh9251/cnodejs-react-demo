@@ -29,6 +29,7 @@
         "new-cap": 0,
         "prop-types": [0,{}],
         "no-useless-constructor": 0,
-        "no-multiple-empty-lines": 2
+        "no-multiple-empty-lines": 2,
+        "camelcase": [0, {"properties": "never"}]
     }
 }
