@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
 import Header from './layout/header';
 import Home from './layout/home';
+import GetStart from './layout/getstart';
 
 const BasicExample = () => (
   <Router>
@@ -13,9 +14,7 @@ const BasicExample = () => (
           <Redirect to="/tab/good/1" />
         )} />
         <Route path="/tab" component={Home} />
-        <Route path="/api" render={() => (
-          <div>This is api</div>
-        )} />
+        <Route path="/getstart" component={GetStart} />
       </div>
     </div>
   </Router>

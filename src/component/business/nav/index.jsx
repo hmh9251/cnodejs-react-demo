@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './style';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-function Nav() {
-  let url = location.href;
-  url = url.match(/\/tab\/(.*)\//)[1];
+function Nav({ pathname }) {
+  let url = pathname.match(/\/tab\/(.*)\//)[1];
 
   return (
     <ul className={style.header}>
@@ -22,6 +22,10 @@ function Nav() {
       </li>
     </ul>
   )
+}
+
+Nav.propTypes = {
+  pathname: PropTypes.string.isRequired
 }
 
 export default Nav;
