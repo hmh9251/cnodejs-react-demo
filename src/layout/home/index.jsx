@@ -27,47 +27,51 @@ class Home extends React.Component {
   render() {
     return (
       <Container>
-        <Sidebar>
-          <Panel>
-            <PanelInner><NoLogin /></PanelInner>
-          </Panel>
-          <Panel>
+        <div>
+          <Sidebar>
             <section>
-              <PanelHeader><span>无人回复的话题</span></PanelHeader>
-              <PanelInner>
-                <NoReplyTopic />
-              </PanelInner>
-            </section>
-          </Panel>
-          <Panel>
-            <section>
-              <PanelHeader>
+              <Panel>
+                <PanelInner><NoLogin /></PanelInner>
+              </Panel>
+              <Panel>
                 <section>
-                  <span>积分榜&nbsp;&nbsp;</span>
-                  <span>TOP >></span>
+                  <PanelHeader><span>无人回复的话题</span></PanelHeader>
+                  <PanelInner>
+                    <NoReplyTopic />
+                  </PanelInner>
                 </section>
-              </PanelHeader>
-              <PanelInner>
-                <Scoreboard />
-              </PanelInner>
+              </Panel>
+              <Panel>
+                <section>
+                  <PanelHeader>
+                    <section>
+                      <span>积分榜&nbsp;&nbsp;</span>
+                      <span>TOP >></span>
+                    </section>
+                  </PanelHeader>
+                  <PanelInner>
+                    <Scoreboard />
+                  </PanelInner>
+                </section>
+              </Panel>
             </section>
-          </Panel>
-        </Sidebar>
-        <Content>
-          <Panel>
-            <section>
-              <PanelHeader><Nav pathname={this.state.path} /></PanelHeader>
-              <Route path="/tab/:id/:page" render={({ match }) => (
-                <PanelInner>
-                  <section>
-                    <List tab={match.params.id} page={match.params.page} />
-                    <Pagination tab={match.params.id} page={match.params.page} />
-                  </section>
-                </PanelInner>
-              )} />
-            </section>
-          </Panel>
-        </Content>
+          </Sidebar>
+          <Content>
+            <Panel>
+              <section>
+                <PanelHeader><Nav pathname={this.state.path} /></PanelHeader>
+                <Route path="/tab/:id/:page" render={({ match }) => (
+                  <PanelInner>
+                    <section>
+                      <List tab={match.params.id} page={match.params.page} />
+                      <Pagination tab={match.params.id} page={match.params.page} />
+                    </section>
+                  </PanelInner>
+                )} />
+              </section>
+            </Panel>
+          </Content>
+        </div>
       </Container>
     )
   }

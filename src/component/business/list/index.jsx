@@ -51,7 +51,7 @@ List.propTypes = {
 }
 
 function Cell({ data }) {
-  let { author, reply_count, visit_count, title, top, tab } = data
+  let { author, reply_count, visit_count, title, top, tab, id } = data
   return (
     <div className={style.cell}>
       <div className={style.cell_left + ' clearfix'}>
@@ -75,7 +75,7 @@ function Cell({ data }) {
           }
         </span>
         {/* <span className={style.put_top + ' ' + style.topiclist_tab}>问答</span> */}
-        <Link to="/" className={style.title}>{title}</Link>
+        <Link to={`/detail/${id}`} className={style.title}>{title}</Link>
       </div>
       <div className={style.cell_right}>
         <Link to="/">
