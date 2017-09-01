@@ -1,7 +1,7 @@
-.DS_Store
-node_modules/
-dist/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-test/unit/coverage
+.DS_STORE
+*.log
+node_modules
+dist
+coverage
+.idea/
+.yarn-cache
