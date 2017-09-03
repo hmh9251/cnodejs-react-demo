@@ -1,20 +1,54 @@
 @import 'base';
-
 // Some best-practice CSS that's useful for most apps
 // Just remove them if they're not what you want
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #e1e1e1;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, sans-serif!important;
+}
+
+body,
+input,
+p,
+textarea {
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.img-polaroid,
+select {
+    background-color: #fff;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+:global {
+    .main {
+        width: 90%;
+        max-width: 1400px;
+        min-width: 960px;
+        margin: 15px auto;
+        min-height: 400px;
+    }
 }

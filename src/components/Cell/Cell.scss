@@ -1,0 +1,96 @@
+.cell {
+    background: #fff;
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    font-size: 14px;
+    &+.cell {
+        border-top: 1px solid #f0f0f0;
+    }
+    .pull-left {
+        float: left;
+    }
+    .pull-right {
+        float: right
+    }
+
+    .user_avatar{
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+        max-width: 100%;
+        vertical-align: middle;
+        border: 0;
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 3px;
+        }
+    }
+
+    .reply_count {
+        width: 70px;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        .count_of_replies {
+            color: #9e78c0;
+        }
+        .count_seperator {
+            margin: 0 3px;
+            font-size: 10px;
+        }
+        .count_of_visits {
+            font-size: 10px;
+            color: #b4b4b4;
+        }
+    }
+
+    .last_time {
+        .user_small_avatar {
+            height: 18px;
+            width: 18px;
+            vertical-align: middle;
+            margin-right: .5em;
+            border-radius: 3px;
+        }
+        .last_active_time {
+            text-align: right;
+            min-width: 50px;
+            display: inline-block;
+            white-space: nowrap;
+            color: #778087;
+            line-height: 30px;
+        }
+    }
+
+    .topic_title_wrapper {
+        white-space: nowrap;
+        .put_top {
+            background: #80bd01;
+            padding: 2px 4px;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 12px;
+        }
+        .topiclist-tab {
+            margin-right: 5px;
+        }
+        .topic_title {
+            max-width: 70%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+            line-height: 30px;
+            color: #333;
+            text-decoration: none;
+            &:hover {
+                color: #888;
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+}

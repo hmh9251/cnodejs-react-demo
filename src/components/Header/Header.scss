@@ -1,0 +1,39 @@
+.header {
+    margin-bottom: 0;
+    z-index: 9;
+    width: 100%;
+    position: relative;
+    background: #444;
+    font-size: 13px;
+    .body {
+        width: 100%;
+        min-width: 960px;
+        margin: 0 auto;
+        max-width: 1400px;
+        padding: 5px 0;
+        .left {
+            float: left;
+            img {
+                width: 120px;
+            }
+        }
+        .right {
+            float: right;
+            .item {
+                display: inline-block;
+                height: 100%;
+                padding: 10px 15px;
+                text-align: center;
+                a {
+                    text-decoration: none;
+                    color: #ccc;
+                }
+                &:hover {
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

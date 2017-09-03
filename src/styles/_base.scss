@@ -10,3 +10,11 @@ For example:
 @import './variables/components';
 @import './themes/default';
 */
+
+:global {
+    .clearfix:after {
+        content:"";
+        display: block;
+        clear: both;
+    }
+}

@@ -32,6 +32,9 @@ const config = {
       'node_modules',
     ],
     extensions: ['*', '.js', '.jsx', '.json'],
+    alias: {
+      components: inProject("src/components/"),
+    }
   },
   externals: project.externals,
   module: {
@@ -104,6 +107,8 @@ config.module.rules.push({
       {
         loader: 'css-loader',
         options: {
+          modules: true,
+          localIdentName: '[path][name]__[local]--[hash:base64:5]',
           sourceMap: project.sourcemaps,
           minimize: {
             autoprefixer: {

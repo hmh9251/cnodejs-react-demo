@@ -1,0 +1,11 @@
+.topic_tab{
+    margin: 0 10px;
+    color: #80bd01;
+    text-decoration: none;
+    &.current_tab {
+        background-color: #80bd01;
+        color: #fff;
+        padding: 3px 4px;
+        border-radius: 3px;
+    }
+}
