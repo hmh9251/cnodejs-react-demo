@@ -1,6 +1,9 @@
 import React from 'react';
 import style from './Cell.scss';
 import CSSModules from 'react-css-modules';
+import moment from 'moment';
+
+moment.locale('zh-cn');
 
 const Cell = props => (
   <div styleName="cell">
@@ -17,18 +20,28 @@ const Cell = props => (
         {props.visit_count}
       </span>
     </span>
+    
+    <a styleName="last_time pull-right" href="/topic/599e90e1bae6f2ed6f7e4cd4#59aacc329e95202d08c91edb">
+      <span styleName="last_active_time">{moment(moment(props.last_reply_at).format("YYYYMMDD HH:mm"), "YYYYMMDD HH:mm").fromNow()}</span>
+    </a>
 
     <div styleName="topic_title_wrapper">
-      <span styleName="put_top topiclist-tab">置顶</span>
+      <span styleName="topiclist-tab" className={props.top ? style.put_top : ''}>
+        {
+          (props.top && '置顶')
+        || (props.tab === 'share' && '分享')
+        || (props.tab === 'ask' && '问答')
+        || (props.tab === 'job' && '招聘')
+        || (props.tab === 'good' && '精华')
+        || '其他'
+        }
+        </span>
       <a styleName="topic_title" href="/topic/599e90e1bae6f2ed6f7e4cd4" title="杭州 NodeParty 第四期总结（slide、现场照片）">
         {props.title}
       </a>
     </div>
 
-    <a styleName="last_time pull-right" href="/topic/599e90e1bae6f2ed6f7e4cd4#59aacc329e95202d08c91edb">
-      <img styleName="user_small_avatar" src="https://avatars2.githubusercontent.com/u/8089971?v=4&amp;s=120"/>
-      <span styleName="last_active_time">{props.last_reply_at}</span>
-    </a>
+    
   </div>
 )
 
