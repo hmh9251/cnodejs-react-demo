@@ -2,6 +2,9 @@
 import CoreLayout from '../layouts/PageLayout/PageLayout'
 import Home from './Home'
 import CounterRoute from './Counter'
+import GetStart from './GetStart'
+import Api from './Api'
+import Topic from './Topic'
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
@@ -12,7 +15,10 @@ export const createRoutes = (store) => ({
   indexRoute: { onEnter: (nextState, replace) => replace('/home/all/1') },
   childRoutes : [
     Home(store),
-    CounterRoute(store)
+    CounterRoute(store),
+    GetStart(),
+    Api(),
+    Topic(store)
   ]
 })
 

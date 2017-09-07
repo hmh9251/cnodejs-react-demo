@@ -11,8 +11,8 @@ function Header() {
                     <img src="http://o4j806krb.qnssl.com/public/images/cnodejs_light.svg"/>
                 </div>
                 <ul styleName="right">
-                    <li styleName="item"><IndexLink to="/home/all">首页</IndexLink></li>
-                    <li styleName="item"><Link to="/counter">新手入门</Link></li>
+                    <li styleName="item"><IndexLink to="/home/all/1">首页</IndexLink></li>
+                    <li styleName="item"><Link to="/getstart">新手入门</Link></li>
                     <li styleName="item"><Link to="/api">API</Link></li>
                     <li styleName="item"><Link to="/about">关于</Link></li>
                     <li styleName="item"><Link to="/signup">注册</Link></li>

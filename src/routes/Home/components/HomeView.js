@@ -9,15 +9,15 @@ import {Link} from 'react-router';
 class HomeView extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props.routeParams.page);
+    
     this.props.setTab(this.props.routeParams.id)
-    this.props.getData(this.props.routeParams.id, 1)
+    this.props.getData(this.props.routeParams.id, "1")
   }
 
   componentWillReceiveProps(nextprops) {
     if(nextprops.routeParams.id !== nextprops.tab) {
       this.props.setTab(nextprops.routeParams.id)
-      this.props.getData(nextprops.routeParams.id, 1)
+      this.props.getData(nextprops.routeParams.id, "1")
     } else if( (nextprops.routeParams.id === nextprops.tab) && (nextprops.routeParams.page !== nextprops.page) ) {
       this.props.getData(nextprops.routeParams.id, nextprops.routeParams.page)
     }

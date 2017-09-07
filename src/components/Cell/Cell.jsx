@@ -2,6 +2,7 @@ import React from 'react';
 import style from './Cell.scss';
 import CSSModules from 'react-css-modules';
 import moment from 'moment';
+import { Link } from 'react-router';
 
 moment.locale('zh-cn');
 
@@ -36,9 +37,9 @@ const Cell = props => (
         || '其他'
         }
         </span>
-      <a styleName="topic_title" href="/topic/599e90e1bae6f2ed6f7e4cd4" title="杭州 NodeParty 第四期总结（slide、现场照片）">
+      <Link styleName="topic_title" to={"/topic/" + props.id} title="杭州 NodeParty 第四期总结（slide、现场照片）">
         {props.title}
-      </a>
+      </Link>
     </div>
 
     
