@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Topic.scss';
 import CSSModules from 'react-css-modules';
 import {Panel, PanelHeader, PanelBody} from 'components/Panel/Panel'
+import ReplyCell from 'components/ReplyCell/ReplyCell'
 import moment from 'moment'
 
 moment.locale('zh-cn');
@@ -54,7 +55,10 @@ class Topic extends React.Component {
                 </Panel>
                 <Panel>
                     <PanelHeader>
-                        <span class="col_fade">{this.props.data.reply_count} 回复</span>
+                        <span styleName="col_fade">{this.props.data.reply_count} 回复</span>
+                        {this.props.data.replies.map((item, i) => (
+                            <ReplyCell index={i} {...item} key={item.id} />
+                        ))}
                     </PanelHeader>
                     <PanelBody></PanelBody>
                 </Panel>
