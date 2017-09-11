@@ -8,8 +8,6 @@ function ReplyCell(props) {
     return (
         <div
             styleName="cell reply_highlight"
-            reply_id="58eeea40c749f63d48fe9427"
-            reply_to_id=""
             id="58eeea40c749f63d48fe9427"
         >
             <div styleName="author_content">

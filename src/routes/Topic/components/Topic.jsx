@@ -5,7 +5,7 @@ import { Panel, PanelHeader, PanelBody } from 'components/Panel/Panel'
 import ReplyCell from 'components/ReplyCell/ReplyCell'
 import moment from 'moment'
 import { EditorState, convertToRaw, ContentState } from 'draft-js';
-import '../assets/react-draft-wysiwyg.scss';
+import '../assets/react-draft-wysiwyg.css';
 import { Editor } from 'react-draft-wysiwyg';
 
 moment.locale('zh-cn');
@@ -84,10 +84,11 @@ class Topic extends React.Component {
                     </PanelHeader>
                     <PanelBody>
                     <Editor
-                        editorState={editorState}
                         wrapperClassName="demo-wrapper"
                         editorClassName="demo-editor"
-                        onEditorStateChange={this.onEditorStateChange}
+                        localization={{
+                        locale: 'ko',
+                        }}
                     />
                     </PanelBody>
                 </Panel>
