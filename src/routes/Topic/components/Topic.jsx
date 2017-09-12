@@ -6,6 +6,7 @@ import ReplyCell from 'components/ReplyCell/ReplyCell'
 import moment from 'moment'
 import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import '../assets/react-draft-wysiwyg.css';
+import '../assets/draft.css';
 import { Editor } from 'react-draft-wysiwyg';
 
 moment.locale('zh-cn');
@@ -87,7 +88,7 @@ class Topic extends React.Component {
                         wrapperClassName="demo-wrapper"
                         editorClassName="demo-editor"
                         localization={{
-                        locale: 'ko',
+                            locale: 'ko',
                         }}
                     />
                     </PanelBody>
