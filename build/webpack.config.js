@@ -141,6 +141,11 @@ config.module.rules.push({
 })
 config.plugins.push(extractStyles)
 
+config.module.rules.push({
+  test    : /\.css$/,
+  use: ["style-loader", "css-loader"],
+})
+
 // Images
 // ------------------------------------
 config.module.rules.push({

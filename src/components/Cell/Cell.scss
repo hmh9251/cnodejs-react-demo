@@ -28,7 +28,7 @@
     }
 
     .reply_count {
-        width: 70px;
+        width: 85px;
         display: inline-block;
         text-align: center;
         line-height: 30px;
@@ -65,15 +65,21 @@
 
     .topic_title_wrapper {
         white-space: nowrap;
-        .put_top {
-            background: #80bd01;
-            padding: 2px 4px;
-            border-radius: 3px;
-            color: #fff;
-            font-size: 12px;
-        }
+        
         .topiclist-tab {
             margin-right: 5px;
+            background-color: #e5e5e5;
+            color: #999;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 12px;
+            &.put_top {
+                background: #80bd01;
+                padding: 2px 4px;
+                border-radius: 3px;
+                color: #fff;
+                font-size: 12px;
+            }
         }
         .topic_title {
             max-width: 70%;
