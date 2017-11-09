@@ -24,7 +24,7 @@ const Cell = props => (
       href="/topic/599e90e1bae6f2ed6f7e4cd4#59aacc329e95202d08c91edb">
       <img
         styleName="user_small_avatar"
-        src="https://avatars2.githubusercontent.com/u/8089971?v=4&amp;s=120"/>
+        src="https://avatars2.githubusercontent.com/u/8089971?v=4&amp;s=120" />
       <span styleName="last_active_time">{props.last_reply_at}</span>
     </a>
 
